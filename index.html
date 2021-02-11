@@ -1,28 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>#1 - Pilot Battle - Wiggly Moustache</title>
-  <link rel="stylesheet" href="./src/css/style.css">
-</head>
-
-<body>
-  <div class="container">
-    <div class="circle left-circle bottom-circle">
-      <div class="child-circle"></div>
-    </div>
-    <div class="circle center-circle">
-      <div class="child-circle"></div>
-    </div>
-    <div class="circle right-circle bottom-circle">
-      <div class="child-circle"></div>
-    </div>
-    <div class="hider-top"></div>
-    <div class="hider-bottom"></div>
-  </div>
-</body>
-
-</html>
+<div class="triangle left-triangle"></div>
+<div class="triangle right-triangle"></div>
+<style>
+  body {
+    background: #F2F2B6;
+    position:relative;
+    margin: 0;
+    width: 400px;
+    height: 300px;
+  }
+  .triangle,.left-triangle::after, .right-triangle::after {	position:absolute;
+    border-right:75px solid transparent;
+    border-left:75px solid transparent;
+  }
+  .left-triangle {
+   left:80px;
+   top:85px;
+    border-top:130px solid  #FD4602;
+  }
+  .left-triangle::after {
+    content:"";
+    left:-95px;
+    bottom: 0px;
+    border-top:130px solid #FF6D00;
+  }
+  .right-triangle {
+    border-bottom: 130px solid #FF6D00;
+    right:60px;
+    top:85px;
+  }
+  .right-triangle::after{
+    content:"";
+    border-bottom: 130px solid #FD4602;
+    right:-55px;
+  } 
+</style>
