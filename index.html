@@ -1,36 +1,42 @@
-<div class="triangle left-triangle"></div>
-<div class="triangle right-triangle"></div>
+<div class="bec bec-gauche"></div>
+<div class="main-circle"></div>
+<div class="bec bec-droit"></div>
 <style>
   body {
-    background: #F2F2B6;
-    position:relative;
-    margin: 0;
-    width: 400px;
-    height: 300px;
+    width:400px;
+    height:300px;
+    background: #0B2429;
   }
-  .triangle,.left-triangle::after, .right-triangle::after {	position:absolute;
-    border-right:75px solid transparent;
-    border-left:75px solid transparent;
+  
+  .main-circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:50px;
+    width: 200px;
+    height: 200px;
+    background: #998235;
+ clip-path: circle(50% at 50% 50%);
+    border-radius: 50% 50%;
+    overflow:normal;
+      z-index:1;
   }
-  .left-triangle {
-   left:80px;
-   top:85px;
-    border-top:130px solid  #FD4602;
+  .bec {
+    position: absolute;
+    height:145px;
+    width:68px;
+    background: yellow;
+    top:50%;
+    transform: translateY(-50%);
   }
-  .left-triangle::after {
-    content:"";
-    left:-95px;
-    bottom: 0px;
-    border-top:130px solid #FF6D00;
+  .bec-gauche {
+   clip-path: polygon(0 50%, 100% 0, 100% 100%); 
+    left:60px;
   }
-  .right-triangle {
-    border-bottom: 130px solid #FF6D00;
-    right:60px;
-    top:85px;
+  .bec-droit {
+    clip-path: polygon(-5% 0%, 100% 50%, -5% 100%);
+    right: 60px;
+    background: #998235;
   }
-  .right-triangle::after{
-    content:"";
-    border-bottom: 130px solid #FD4602;
-    right:-55px;
-  } 
+  
 </style>
