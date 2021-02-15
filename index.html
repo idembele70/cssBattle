@@ -1,5 +1,12 @@
 <div class="bec bec-gauche"></div>
-<div class="main-circle"></div>
+<div class="main-circle">
+  <div class="max-circle">
+    <div class="med-circle">
+      <div class="little-circle">		</div>
+    </div>
+  </div>
+  
+</div>
 <div class="bec bec-droit"></div>
 <style>
   body {
@@ -23,20 +30,42 @@
   }
   .bec {
     position: absolute;
-    height:145px;
-    width:68px;
+    height:200px;
+    width:85px;
     background: yellow;
-    top:50%;
+    top:150px;
     transform: translateY(-50%);
   }
-  .bec-gauche {
-   clip-path: polygon(0 50%, 100% 0, 100% 100%); 
-    left:60px;
-  }
   .bec-droit {
-    clip-path: polygon(-5% 0%, 100% 50%, -5% 100%);
+    clip-path: polygon(5% 9%, 100% 50%, -15% 100%);
     right: 60px;
-    background: #998235;
+    //background: #998235;
   }
   
+  .max-circle {
+    width:90%;
+    height:90%;
+    margin: 5% auto;
+    background:#0B2429;
+    clip-path: circle();
+    display:flex;
+  }
+  .med-circle{
+    width:78%;
+    height:78%;
+    background:#F3AC3C;
+    clip-path:circle();
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .little-circle {
+    width:50px;
+    height:150px;
+    background:#0B2429;
+    clip-path:circle();
+//	border-radius:50%
+    margin: 33%
+  }
 </style>
