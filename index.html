@@ -1,71 +1,51 @@
-<div class="bec bec-gauche"></div>
-<div class="main-circle">
-  <div class="max-circle">
-    <div class="med-circle">
-      <div class="little-circle">		</div>
-    </div>
-  </div>
-  
+<div> 
+  <p j></p>
+  <p i></p>
+  <p e></p>
+  <p f></p>
 </div>
-<div class="bec bec-droit"></div>
+  
 <style>
-  body {
-    width:400px;
-    height:300px;
-    background: #0B2429;
+  *, [i]{
+    background:#0B2429;
   }
-  
-  .main-circle {
+  p {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top:50px;
-    width: 200px;
-    height: 200px;
-    background: #998235;
- clip-path: circle(50% at 50% 50%);
-    border-radius: 50% 50%;
-    overflow:normal;
-      z-index:1;
-  }
-  .bec {
-    position: absolute;
+    left:50%;
+    margin:42px -100px;
+    width:200px;
     height:200px;
-    width:85px;
-    background: yellow;
-    top:150px;
-    transform: translateY(-50%);
+    background: #998235;
+    border-radius:50%;
   }
-  .bec-droit {
-    clip-path: polygon(5% 9%, 100% 50%, -15% 100%);
-    right: 60px;
-    //background: #998235;
+  [i]{
+    width:180px;
+    height:180px;
+    margin: 52px -90px;
   }
-  
-  .max-circle {
-    width:90%;
-    height:90%;
-    margin: 5% auto;
-    background:#0B2429;
-    clip-path: circle();
-    display:flex;
-  }
-  .med-circle{
-    width:78%;
-    height:78%;
+  [e]{
+    width:140px;
+    height:140px;
+    margin: 72px -70px;
     background:#F3AC3C;
-    clip-path:circle();
-    margin:auto;
-    display:flex;
-    justify-content:center;
-    align-items:center;
   }
-  .little-circle {
-    width:50px;
-    height:150px;
+  [f]{
     background:#0B2429;
-    clip-path:circle();
-//	border-radius:50%
-    margin: 33%
+    width:50px;
+    height:50px;
+    margin:117px -25px;
   }
-</style>
+  [j]:after, [j]:before{
+    content:"";
+    position: absolute;
+    background:#998235;
+    width:100px;
+    height:100px;
+    top:50px;
+    left:-21px;
+    transform: rotate(45deg);
+  }
+  [j]:BEFORE {
+    left:121px;
+  }
+ </style>
