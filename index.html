@@ -1,49 +1,52 @@
-<div class="circle top-circle">
-</div>
-<div class="middle-spinner">
-  <div class="left-circle"></div><div class='right-circle'></div>
-</div>
-<div class="circle bottom-circle">
-</div>
-<style>
-  * {
-    background: #09042A
-  }
-  .circle {
-    position: absolute;
-    height:70px;
-    width:70px;
-    background:#09042A;
-   	clip-path:circle();
-    left:170px;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    z-index:2;
-  }
-  .top-circle {
-	top:67px
-  }
-  .top-circle:after {
-    position: absolute;
-    content:"";
-    width: 60px;
-    height:60px;
-    border-radius:50%;
-    background:yellow;
-  }
-  
-  .middle-spinner {
-    position: relative;
-    width:200px;
-    height:80px;
-    background:#E78481;
-    top:50%;
-    left:50%;
-    transform: translateX(-50%) translateY(-50%);
-  }
-  
-  .bottom-circle{
-    bottom:67px;
-  }
- </style>
+<div class="first-parent">
+    <p class="first-line">A</p>
+    <p class="first-line">B</p>
+    <p class="first-line">C</p>
+    <p class="first-line">D</p>
+    </div>
+      <div class="second-parent">
+    <p class="second-line">D</p>
+    <p class="second-line">E</p>
+    <p class="second-line">F</p>
+    <p class="second-line">G</p>
+    </div>
+      <div class="last-parent">
+    <p class="last-line">H</p>
+    <p class="last-line">I</p>
+    <p class="last-line">J</p>
+    <p class="last-line">K</p>
+    </div>
+      <style>
+      body {
+        background: #5C434C;
+        display:grid;
+        grid-template: repeat(3,90px) / repeat(4,1fr);
+        margin: 0;
+       // gap: 0, 10;
+        justify-items: center;
+      }
+      p {
+        width: 15px;
+        height: 15px;
+        background: #dd6b4d;
+      }
+        
+        div {
+          width:100%;
+          display:flex;
+        }
+        
+      .first-parent {
+        grid-area: 1 / 1 / 2 / 2;
+        padding: 10px;
+      }
+      
+      .second-parent {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      
+      .last-parent {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+    </style>
+    
