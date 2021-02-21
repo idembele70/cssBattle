@@ -1,4 +1,5 @@
-<div class='losange'></div>
+<div class='losange losange-center'></div>
+<div class='losange losange-top losange-top-left'></div>
 <style>
   *{
     margin: 0;
@@ -6,12 +7,26 @@
   }
   .losange {
     position: absolute;
+
+  }
+  .losange-center {
+    width: 100px;
+    height: 100px;
     background: #F3AC3C;
-   width: 102px;
-    height: 102px;
 	transform: rotate(45deg);
-    top:134px;
+    top:135px;
     left: 150px;
-     
+  }
+  .losange-top {
+    width:100px;
+    height:190px;
+  }
+  .losange-top-left {
+    background: #998235;
+//    clip-path: polygon(50% 0%, 20% 50%, 50% 50%, 100% 30%);
+      clip-path: polygon(50% 20%, 0% 70%, 30% 100%, 80% 50%);  
+    top: 40px;
+    left: 90px;
+  transform: rotate(-.45turn);
   }
 </style>
