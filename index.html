@@ -1,37 +1,77 @@
-<div class='losange losange-center'></div>
-<div class='losange losange-top losange-top-left'></div>
-<div class='losange losange-top losange-top-right'></div>
+<div class="figure figure-left"></div>
+<div class="figure figure-right"> </div>
+<p class="circle circle-outside"></p>
+<p class="circle circle-outside"></p>
+<p class="circle circle-outside"></p>
+<p class="circle circle-outside"></p>
+<p class="circle circle-inside"></p>
+<p class="circle circle-inside"></p>
+
 <style>
   *{
-    margin: 0;
-    background: #0B2429;
+    background: #62306D;
+    margin:0;
   }
-  .losange {
-    position: absolute;
+  body{
+    width: 400px;
+    height: 300px;
+    display:flex;
+    align-items:center;
   }
-  .losange-center {
-    width: 100px;
+  .figure {
     height: 100px;
-    background: #F3AC3C;
-	transform: rotate(45deg);
-    top:135px;
-    left: 150px;
-    z-index:2
   }
-  .losange-top {
-    width:145px;
-    height:145px;
-    top: 40px;
+  .figure-left {
+    width:140px;
+    margin-left:100px;
+    background: #F7EC7D;
+  }
+  .figure-right{
+    width:60px;
+    background: #E38F66;
+  }
+  .circle {
+    position: absolute;
+    background :#62306D;
+    width: 20px;
+    height:20px;
+  }
+  .circle-outside {
+    border-bottom-right-radius:100%;
+     
+  }
+  .circle-outside:nth-of-type(odd){
+    left:100px
+  }
+  .circle-outside:first-of-type{
+     top:100px;
+    left:100px;
+  }
+  .circle-outside:nth-of-type(even)	{
+    right:100px;
+  }
+  .circle-outside:nth-of-type(2){
+    top:100px;
+    transform: rotate(90deg);
+  }
+  .circle-outside:nth-of-type(3) {
+    bottom:100px;
+    transform: rotate(.75turn);
+  }
+   .circle-outside:nth-of-type(4) {
+    bottom:100px;
+    transform: rotate(.5turn);
+  }
+  .circle-inside {
+    border-radius: 0 0 100% 100%; 
+    right:150px;
     
   }
-  .losange-top-left {
-    background: #998235;
-    left: 130px;
-    clip-path: polygon(49% 2%, 0% 50%, 0% 100%, 49% 52%);
+  .circle-inside:nth-last-of-type(2) {
+    top:90px;
   }
-  .losange-top-right {
-    background : #1A4341;
-    left:199px;
-    clip-path: polygon(0% 2%, 50% 50%, 50% 100%, 0% 50%);
+  .circle-inside:last-of-type{
+    bottom:90px;
+    transform: rotate(.5turn);
   }
 </style>
