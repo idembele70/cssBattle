@@ -1,54 +1,77 @@
-<div class="first-parent">
-  <p></p>
-  <p></p>
-  <p></p>
-  <p></p>
-  </div>
-    <div class="second-parent">
-  <p class="bg-beige"></p>
-  <p></p>
-  <p class="bg-beige"></p>
-  <p></p>
-  </div>
-    <div class="last-parent">
-  <p></p>
-  <p></p>
-  <p></p>
-  <p></p>
-  </div>
-    <style>
-    body {
-      background: #5C434C;
-      display:grid;
-      grid-template: repeat(3,100px) / 1fr;
-      margin: 0;
-    }
-      div {
-        display:flex;
-      }
-      div:not(.second-parent) p:nth-of-type(2n), .bg-beige  {
-        background:#F5D6B4
-      }
-      
-    p {
-      width: 80px;
-      height: 80px;
-      background: #F09462;
-      margin:10px;
-      border-top-left-radius:100%;
-    }
+<div class="figure figure-left"></div>
+<div class="figure figure-right"> </div>
+<p class="circle circle-outside"></p>
+<p class="circle circle-outside"></p>
+<p class="circle circle-outside"></p>
+<p class="circle circle-outside"></p>
+<p class="circle circle-inside"></p>
+<p class="circle circle-inside"></p>
 
-    .first-parent {
-      grid-area: 1 / 1 / 2 / 2;
-
-    }
+<style>
+  *{
+    background: #62306D;
+    margin:0;
+  }
+  body{
+    width: 400px;
+    height: 300px;
+    display:flex;
+    align-items:center;
+  }
+  .figure {
+    height: 100px;
+  }
+  .figure-left {
+    width:140px;
+    margin-left:100px;
+    background: #F7EC7D;
+  }
+  .figure-right{
+    width:60px;
+    background: #E38F66;
+  }
+  .circle {
+    position: absolute;
+    background :#62306D;
+    width: 20px;
+    height:20px;
+  }
+  .circle-outside {
+    border-bottom-right-radius:100%;
+     
+  }
+  .circle-outside:nth-of-type(odd){
+    left:100px
+  }
+  .circle-outside:first-of-type{
+     top:100px;
+    left:100px;
+  }
+  .circle-outside:nth-of-type(even)	{
+    right:100px;
+  }
+  .circle-outside:nth-of-type(2){
+    top:100px;
+    transform: rotate(90deg);
+  }
+  .circle-outside:nth-of-type(3) {
+    bottom:100px;
+    transform: rotate(.75turn);
+  }
+   .circle-outside:nth-of-type(4) {
+    bottom:100px;
+    transform: rotate(.5turn);
+  }
+  .circle-inside {
+    border-radius: 0 0 100% 100%; 
+    right:150px;
     
-    .second-parent {
-      grid-area: 2 / 1 / span 1 / 2;
-    }
-    
-    .last-parent {
-      grid-area: 3 / 1 / -1 / 2;
-    }
-  </style>
-  
+  }
+  .circle-inside:nth-last-of-type(2) {
+    top:90px;
+  }
+  .circle-inside:last-of-type{
+    bottom:90px;
+    transform: rotate(.5turn);
+  }
+</style>
