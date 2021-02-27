@@ -1,77 +1,52 @@
-<div class="figure figure-left"></div>
-<div class="figure figure-right"> </div>
-<p class="circle circle-outside"></p>
-<p class="circle circle-outside"></p>
-<p class="circle circle-outside"></p>
-<p class="circle circle-outside"></p>
-<p class="circle circle-inside"></p>
-<p class="circle circle-inside"></p>
-
+<div class="figure figure-left">
+</div>
+<div class="figure figure-right">
+</div>
+<p class="figure-left__border"></p>
 <style>
-  *{
-    background: #62306D;
-    margin:0;
-  }
   body{
-    width: 400px;
-    height: 300px;
-    display:flex;
-    align-items:center;
+    background: #222;
   }
-  .figure {
-    height: 100px;
+  .figure{
+    width:100px;
+	height:100px;
+    background: #dd6b4d;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 30% 30%, 30% 80%, 0% 80%);
+    border-top-left-radius:10px;
+    position: absolute;
   }
   .figure-left {
-    width:140px;
-    margin-left:100px;
-    background: #F7EC7D;
+    top:82px;
+	transform: rotate(-45deg);
+    left:145px;
+    background: #F2994A;
   }
-  .figure-right{
-    width:60px;
-    background: #E38F66;
+  .figure-right {
+	top:117px;
+	transform: rotate(135deg);
+    right:145px
   }
-  .circle {
-    position: absolute;
-    background :#62306D;
-    width: 20px;
-    height:20px;
+  .figure-right::before,.figure-left__border{
+    color: yellow;
+    position: fixed;
+    bottom:50px;
   }
-  .circle-outside {
+  .figure-right::before{
+    content: "::";
+    height:30%;
+    width:100%;
+    background:red;
+    border-radius: 0% 0% 0% 0%
+  }
+  .figure-left__border{
+    background: grey;
+    width : 5%;
+    height:5%;
+    margin: 65px 180;
+    overflow: visible;
     border-bottom-right-radius:100%;
-     
-  }
-  .circle-outside:nth-of-type(odd){
-    left:100px
-  }
-  .circle-outside:first-of-type{
-     top:100px;
-    left:100px;
-  }
-  .circle-outside:nth-of-type(even)	{
-    right:100px;
-  }
-  .circle-outside:nth-of-type(2){
-    top:100px;
-    transform: rotate(90deg);
-  }
-  .circle-outside:nth-of-type(3) {
-    bottom:100px;
-    transform: rotate(.75turn);
-  }
-   .circle-outside:nth-of-type(4) {
-    bottom:100px;
-    transform: rotate(.5turn);
-  }
-  .circle-inside {
-    border-radius: 0 0 100% 100%; 
-    right:150px;
+	transform: rotate(-45deg);
     
   }
-  .circle-inside:nth-last-of-type(2) {
-    top:90px;
-  }
-  .circle-inside:last-of-type{
-    bottom:90px;
-    transform: rotate(.5turn);
-  }
+  
 </style>
