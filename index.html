@@ -2,7 +2,10 @@
 </div>
 <div class="figure figure-right">
 </div>
-<p class="figure-left__border"></p>
+<p class="circle circle-left"></p>
+<p class="circle circle-right"></p>
+
+
 <style>
   body{
     background: #222;
@@ -10,7 +13,6 @@
   .figure{
     width:100px;
 	height:100px;
-    background: #dd6b4d;
     clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 30% 30%, 30% 80%, 0% 80%);
     border-top-left-radius:10px;
     position: absolute;
@@ -24,29 +26,31 @@
   .figure-right {
 	top:117px;
 	transform: rotate(135deg);
-    right:145px
+    right:145px;
+    background: #2D9CDB;
   }
-  .figure-right::before,.figure-left__border{
-    color: yellow;
-    position: fixed;
-    bottom:50px;
+
+  .circle {
+    width:28px;
+    height: 28px;
+    border-bottom: 3px solid #222;
+    border-right: solid #222;
+    border-radius : 8px 0;
+    position: absolute;
   }
-  .figure-right::before{
-    content: "::";
-    height:30%;
-    width:100%;
-    background:red;
-    border-radius: 0% 0% 0% 0%
+  
+  .circle-left {
+    top: 136px;
+    left: 168.7px;
+    transform: rotate(-.125turn);
   }
-  .figure-left__border{
-    background: grey;
-    width : 5%;
-    height:5%;
-    margin: 65px 180;
-    overflow: visible;
-    border-bottom-right-radius:100%;
-	transform: rotate(-45deg);
-    
+  
+  .circle-right {
+    height:30px;
+    width:30px;
+    bottom:135px;
+    right: 167px;
+    transform: rotate(.376turn);
   }
   
 </style>
