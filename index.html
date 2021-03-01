@@ -1,56 +1,17 @@
-<div class="figure figure-left">
-</div>
-<div class="figure figure-right">
-</div>
-<p class="circle circle-left"></p>
-<p class="circle circle-right"></p>
-
-
-<style>
-  body{
-    background: #222;
-  }
-  .figure{
-    width:100px;
-	height:100px;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 30% 30%, 30% 80%, 0% 80%);
-    border-top-left-radius:10px;
-    position: absolute;
-  }
-  .figure-left {
-    top:82px;
-	transform: rotate(-45deg);
-    left:145px;
-    background: #F2994A;
-  }
-  .figure-right {
-	top:117px;
-	transform: rotate(135deg);
-    right:145px;
-    background: #2D9CDB;
-  }
-
-  .circle {
-    width:28px;
-    height: 28px;
-    border-bottom: 3px solid #222;
-    border-right: solid #222;
-    border-radius : 8px 0;
-    position: absolute;
-  }
+<p>
+  <style>
+    *{
+  background:#F5D6B4;
+    }
+    body {
+      display:flex;
+      align-items:center;
+    }
+    p {
+      width: 100px;
+      height: 100px;
+      background: #dd6b4d;
+      clip-path: circle(50% at 50% 55%)
+    }
+  </style>
   
-  .circle-left {
-    top: 136px;
-    left: 168.7px;
-    transform: rotate(-.125turn);
-  }
-  
-  .circle-right {
-    height:30px;
-    width:30px;
-    bottom:135px;
-    right: 167px;
-    transform: rotate(.376turn);
-  }
-  
-</style>
