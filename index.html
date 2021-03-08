@@ -1,4 +1,6 @@
-<p>
+<p l> </p>
+<p r> </p>
+<div class="rt"></div>
   <style>
     *{
   background:#F5D6B4;
@@ -6,15 +8,33 @@
     body {
       margin:0
     }
-    p {
-      width: 130px;
-      height: 130px;
-      background: #dd6b4d;
-      clip-path: circle(40% at 50% 63%);
+    p{
+    width: 130px;
+    height: 130px;
+    background: #D86F45;
+    clip-path: circle(40% at 50% 63%);
    	position: relative;
-     left:40%;
-     top:50%;
+  
       transform: translate(-55%, -50%);
     }
+    [l]{
+      left:40%;
+      top:50%;
+    }
+    [r]{
+      left:60%;
+      top:-9%
+    }
+    [class$='rt']{
+      height: 50px;
+      width:150px;
+      position:absolute;
+      background:#D86F45;
+      right:100px;
+      bottom:85;
+      border-radius: 40px
+    }
+    
   </style>
+
   ()
