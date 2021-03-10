@@ -1,24 +1,27 @@
-<div class="figure figure__L-big"></div>
-<div class="figure figure__L-little"></div>
+<div class="figureL"></div>
+<div class="figureR"></div>
 <style>
   body {
 	background: #F3AC3C;
     position:relative;
   }
-  .figure {
-    width: 200px;
-    height: 200px;
+  [class*=figure] {
+    width: 50px;
+    height: 100px;
     background: #1A4341;
     position: absolute;
-    top:50%;
-    left: 50%;
+    top:67.5%;
+    left: 30.5%;
 	transform: translate(-50%, -50%);
-  }
-  .figure__L-big {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 50%, 0% 50%);
-  }
-  .figure__L-little {
-    clip-path: polygon(0% 50%, 50% 50%, 50% 75%, 25% 75%, 25% 100%, 0% 100%);
+color: #1A4341;
+	box-shadow: 125px -75px 0 25px, 	125px -25px 0 25px;
     background: #998235;
   }
+  [class$="R"]{
+    transform: rotate(90deg);
+    top:41.2%;
+    box-shadow: -73px -27px 0 27px;
+  }
 </style>
+
+<!-- Voir Solutions !!!!! -->
