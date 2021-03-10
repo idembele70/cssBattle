@@ -1,3 +1,24 @@
-<p><dd><style>*{background:#F5D6B4}body *{background:#D86F45;border-radius:60q}P{height:100;width:100;;margin: 115 92;box-shadow:85q -32q#D86F45}dd{height:50;
-  width:170;position:fixed;top:165;
-  left:90;
+<div class="figure figure__L-big"></div>
+<div class="figure figure__L-little"></div>
+<style>
+  body {
+	background: #F3AC3C;
+    position:relative;
+  }
+  .figure {
+    width: 200px;
+    height: 200px;
+    background: #1A4341;
+    position: absolute;
+    top:50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+  }
+  .figure__L-big {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 50%, 0% 50%);
+  }
+  .figure__L-little {
+    clip-path: polygon(0% 50%, 50% 50%, 50% 75%, 25% 75%, 25% 100%, 0% 100%);
+    background: #998235;
+  }
+</style>
