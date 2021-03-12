@@ -1,27 +1,31 @@
-<div class="figureL"></div>
-<div class="figureR"></div>
+<div class="main__figure main__figure-left"><p></p></div>
+<div class="main__figure main__figure-right">
+  <p></p>
+</div>
 <style>
   body {
-	background: #F3AC3C;
-    position:relative;
+    background : #62306D;
   }
-  [class*=figure] {
-    width: 50px;
-    height: 100px;
-    background: #1A4341;
-    position: absolute;
-    top:67.5%;
-    left: 30.5%;
-	transform: translate(-50%, -50%);
-color: #1A4341;
-	box-shadow: 125px -75px 0 25px, 	125px -25px 0 25px;
-    background: #998235;
+  .main__figure {
+    width: 100px;
+    height: 150px;
+    background: #AA445F;
+    border-radius: 50px;
+     margin :50 72 ;
   }
-  [class$="R"]{
-    transform: rotate(90deg);
-    top:41.2%;
-    box-shadow: -73px -27px 0 27px;
+  .main__figure-left{
+    transform: rotate(.5turn); 
+  }
+  p{
+    width: 100px;
+    height:100px;
+    clip-path: circle(50%);
+      background:#F7EC7D;
+  }
+  .main__figure-right {
+         margin :-150 212;
+    background:#E38F66;
   }
 </style>
 
-<!-- Voir Solutions !!!!! -->
+<!-- retenter avec box shadow et voir corriger -->
