@@ -1,31 +1,33 @@
-<div class="main__figure main__figure-left"><p></p></div>
-<div class="main__figure main__figure-right">
-  <p></p>
+<div class="container">
+  <div class="ellipse"></div>
+  <div class="ellipse ellipse-right"></div>
 </div>
+
 <style>
-  body {
-    background : #62306D;
+  body{
+    background: #62306D;
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
-  .main__figure {
-    width: 100px;
+  .container{
+    height: 200px;
+    width: 240px;
+    display:flex;
+    justify-content:space-between;
+  }
+  .ellipse {
     height: 150px;
-    background: #AA445F;
+    width:100px;
+    background:#F7EC7D;
     border-radius: 50px;
-     margin :50 72 ;
+    color: #AA445F;
+    box-shadow: inset 0px 50px;
   }
-  .main__figure-left{
-    transform: rotate(.5turn); 
-  }
-  p{
-    width: 100px;
-    height:100px;
-    clip-path: circle(50%);
-      background:#F7EC7D;
-  }
-  .main__figure-right {
-         margin :-150 212;
-    background:#E38F66;
-  }
-</style>
+  
+  .ellipse-right{
+    transform: rotate(180deg);
+    align-self: flex-end;
+    color: #
 
 <!-- retenter avec box shadow et voir corriger -->
