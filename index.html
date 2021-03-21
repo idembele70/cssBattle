@@ -1,20 +1,39 @@
-<div class="arc"><p></div>
+<!-- Fini avec Clip path -->
 
+<div class="arc-left"><p></p></div>
+<div class="arc-right"><p></p></div>
+<div class="arc-bottom"><p></p></div>
   <style>
     body{
       background: #6592CF;
     }
-    .arc{
+    [class^='arc']{
       width:120px;
-      height:60px;
-      clip-path:circle(50px at 50% 90%);
-      background:red
+      height:120px;
+      background:#060F55;
+      clip-path:circle(50% at 50% 100%);
+      position:relative;
+      display:flex;
+      align-items: flex-end;
+      justify-content:center;
     }
-    p{
-      height: 20px;
-      width:20px;
-      background:black;
-      
+    .arc-left{
+      top:-28px;
+      left:32px;
     }
-
-    
+    .arc-right{
+      top:-148px;
+      left:232px;
+    }
+    .arc-bottom{
+      top: -48px;
+      left: 132px;
+      transform: rotate(.5turn)
+    }
+    [class^=arc] > p{
+      height:69%;
+      width:69%;
+      background:#6592CF;
+      clip-path: circle(49% at 50%);
+      margin: -42px;
+    }
