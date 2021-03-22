@@ -1,16 +1,25 @@
-<!-- en cours avec box shadow -->
-<p><p i>
-  <style>
-    *{
-      background :#6592CF;
-    }
-    p{
-      position : fixed;
-      height: 120px;
-      width:120px;
-      background:red;
-      border-radius: 50%
-    }
-    [i]{
-      
-    }
+<div class="circle">
+  <div class="spiner"></div>
+</div>
+<style>
+  body{
+	background: radial-gradient(#E38F66, #E38F66);
+  }
+  .circle{
+    width:200px;
+    height:calc(400px/2);
+    background: #AA445F;
+    border-radius: calc(100%/2);
+    margin: 50 auto;
+    display:grid;
+    justify-items:center;
+    align-items: center;
+  }
+  .spiner{
+    width: 140px;
+    height: 140px;
+    background: #F7EC7D;
+   // border-radius:50%;
+    border-top: 2px solid red
+    
+  }
