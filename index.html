@@ -1,55 +1,46 @@
-<div>
-  <p class="circle"></p>
-    <p class="semi-circle"></p>
-    <p class="semi-circle-top"></p>
-  </div>
-  <style>
-    * {
-      margin: 0;
-    }
-    body {
-      background: #1A4341;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-      div {
-      width: 260px;
-      height: 120px;
-      border: 2px solid red;
-        display:flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        position: relative;
-    }
-    p{
-      margin:0;
-    }
-    .circle {
-      height: 50px;
-      width: calc(100px/2);
-      background: #998235;
-      border-radius:50%;
-    }
-    .circle {
-      box-shadow: 70px 70px #998235,
-              140px 70px #F3AC3C,
-              210px 0px #F3AC3C;
-    }
-    [class*=semi-circle]{
-      height:50px;
-      width:50px;
-      background: #F3AC3C;
-      border-radius: 0 0 50px 50px;
-      box-shadow: 210px 0 #998235;
-    }
-    [class$="top"]{
-      background: #998235;
-      position: absolute;
-      top:0;
-       right: 70px;
-      transform: scaleY(-1);
-      box-shadow: -70px 0 #F3AC3C;
-    }
-  </style>
+<p class="circle"></p>
+<p class="semi-circle"></p>
+<p class="semi-circle-top"></p>
+<style>
+  * {
+    margin: 0;
+    background: #1A4341;
+    color: F3AC3C;
+  }
+
+  * * {
+    position: fixed;
+  }
+
+  .circle {
+    height: 50px;
+    width: 50px;
+    top: 90px;
+    left: 70px;
+    background: #998235;
+    border-radius: 50%;
+    box-shadow: 74q 74q #998235,
+      148q 74q,
+      222q 0;
+    : 90 70;
+  }
+
+  [class*=semi-circle] {
+    height: 50px;
+    width: 50px;
+    top: 160;
+    left: 70px;
+    background: #F3AC3C;
+    border-radius: 0 0 50px 50px;
+    box-shadow: 210px 0 #998235;
+  }
+
+  [class$="top"] {
+    background: #998235;
+    right: 210px;
+    top: 90px;
+    left: 210px;
+    transform: scaleY(-1);
+    box-shadow: -70px 0 #F3AC3C;
+  }
+</style>
