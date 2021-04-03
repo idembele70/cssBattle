@@ -1,2 +1,55 @@
-<p c><a s><p L>
-  <style>*{background:#e38f66;margin:0}[c]{width:200;height:200;background:#aa445f;border-radius:50%;margin:50 auto;display:flex;justify-content:center;align-items:center}[s]{width:140;height:140;border-radius:50%;background:#aa445f;box-shadow:inset 0 0 0 32q #f7ec7d}[L]{position:fixed;height:70;width:70;background:#aa445f;top:150;left:200;box-shadow:-74q -74q 0 0 #aa445f
+<div>
+  <p class="circle"></p>
+    <p class="semi-circle"></p>
+    <p class="semi-circle-top"></p>
+  </div>
+  <style>
+    * {
+      margin: 0;
+    }
+    body {
+      background: #1A4341;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+      div {
+      width: 260px;
+      height: 120px;
+      border: 2px solid red;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+    }
+    p{
+      margin:0;
+    }
+    .circle {
+      height: 50px;
+      width: calc(100px/2);
+      background: #998235;
+      border-radius:50%;
+    }
+    .circle {
+      box-shadow: 70px 70px #998235,
+              140px 70px #F3AC3C,
+              210px 0px #F3AC3C;
+    }
+    [class*=semi-circle]{
+      height:50px;
+      width:50px;
+      background: #F3AC3C;
+      border-radius: 0 0 50px 50px;
+      box-shadow: 210px 0 #998235;
+    }
+    [class$="top"]{
+      background: #998235;
+      position: absolute;
+      top:0;
+       right: 70px;
+      transform: scaleY(-1);
+      box-shadow: -70px 0 #F3AC3C;
+    }
+  </style>
