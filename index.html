@@ -1,46 +1,38 @@
-<p class="circle"></p>
-<p class="semi-circle"></p>
-<p class="semi-circle-top"></p>
+<div class="figure-losange"></div>
+<div class="figure-circle"></div>
 <style>
-  * {
-    margin: 0;
-    background: #1A4341;
-    color: F3AC3C;
-  }
-
-  * * {
-    position: fixed;
-  }
-
-  .circle {
-    height: 50px;
-    width: 50px;
-    top: 90px;
-    left: 70px;
-    background: #998235;
-    border-radius: 50%;
-    box-shadow: 74q 74q #998235,
-      148q 74q,
-      222q 0;
-    : 90 70;
-  }
-
-  [class*=semi-circle] {
-    height: 50px;
-    width: 50px;
-    top: 160;
-    left: 70px;
+  body {
     background: #F3AC3C;
-    border-radius: 0 0 50px 50px;
-    box-shadow: 210px 0 #998235;
   }
 
-  [class$="top"] {
-    background: #998235;
-    right: 210px;
-    top: 90px;
-    left: 210px;
-    transform: scaleY(-1);
-    box-shadow: -70px 0 #F3AC3C;
+  [class^="figure"] {
+    width: 130px;
+    height: 130px;
+    background: #dd6b4d;
   }
+
+  [class$="losange"] {
+    transform: rotate(45deg);
+    margin: 90px auto
+  }
+
+  [class*=circle] {
+    position: fixed;
+    top: 60px;
+    left: 110px;
+    background: red;
+    clip-path: circle(50% at 0% 50%);
+    transform: rotate(.12turn);
+  }
+
 </style>
+
+
+<!-- 
+
+exercice linear gradient
+faire un degrade linear du rouge vers le bleu en partant du haut, droit, bas, gauche, guche-droit...
+faire un degradé circulaire 
+
+
+revision stop #4 mais #3 pas fait
