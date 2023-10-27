@@ -1,31 +1,55 @@
-<div class="figure-losange"></div>
-<div class="figure-circle"></div>
-<style>
-  body {
-    background: #F3AC3C;
-  }
-
-  [class^="figure"] {
-    width: 130px;
-    height: 130px;
-    background: #dd6b4d;
-  }
-
-  [class$="losange"] {
-    transform: rotate(45deg);
-    margin: 90px auto
-  }
-
-  [class*=circle] {
-    position: fixed;
-    top: 60px;
-    left: 110px;
-    background: red;
-    clip-path: circle(50% at 0% 50%);
-    transform: rotate(.12turn);
-  }
-
-</style>
+<div class="container">
+  
+  <div class="col">
+  <div class="row odd"></div>
+  <div class="row even"></div>
+  <div class="row odd"></div>
+  <div class="row even"></div>
+  <div class="row odd"></div>
+  <div class="row even"></div>
+  </div>
+    <div class="col">
+  <div class="row even"></div>
+  <div class="row odd"></div>
+  <div class="row even"></div>
+  <div class="row odd"></div>
+  <div class="row even"></div>
+  <div class="row odd"></div>
+  </div>
+    
+  </div>
+  <style>
+    body {
+      background-color:#0D004C;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin:0;
+    }
+    .container {
+      width: 240px;
+      height: 180px;
+      display:flex;
+    }
+    .col {
+      background: #dd6b4d;
+      display:flex;
+      width:50%;
+      height:100%;
+      flex-direction:column;
+      flex-wrap:wrap;
+    }
+    .row {
+      height: 30px;
+      width: 100%;
+    }
+    .odd {
+      background:#0D004C;
+    }
+    .even {
+      background:#B8B7CC;
+    }
+  </style>
 
 
 <!-- 
