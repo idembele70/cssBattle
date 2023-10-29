@@ -1,62 +1,48 @@
-<div class="container">
-  
-  <div class="col">
-  <div class="row odd"></div>
-  <div class="row even"></div>
-  <div class="row odd"></div>
-  <div class="row even"></div>
-  <div class="row odd"></div>
-  <div class="row even"></div>
-  </div>
-    <div class="col">
-  <div class="row even"></div>
-  <div class="row odd"></div>
-  <div class="row even"></div>
-  <div class="row odd"></div>
-  <div class="row even"></div>
-  <div class="row odd"></div>
-  </div>
-    
+<div class="rectangle">
+  <div class="circle-top"></div>
+  <div class="circle-bottom"></div>
   </div>
   <style>
     body {
-      background-color:#0D004C;
+     background-color: #B8B7CC;
       display:flex;
       justify-content:center;
       align-items:center;
-      margin:0;
     }
-    .container {
-      width: 240px;
-      height: 180px;
-      display:flex;
+    .rectangle {
+      width: 250px;
+      height: 150px;
+      background: #1E1E5A;
+      position: relative;
     }
-    .col {
-      background: #dd6b4d;
-      display:flex;
-      width:50%;
-      height:100%;
-      flex-direction:column;
-      flex-wrap:wrap;
+    div[class*=circle]{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: #1E1E5A;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+      overflow: hidden;
     }
-    .row {
-      height: 30px;
+    .circle-top {
+      bottom:67%;
+    }
+    .circle-top:after, .circle-bottom:after {
+      content:"";
+      position: absolute;
+      bottom: 0;
+      height: 50%;
       width: 100%;
+      background-color: #B8B7CC;
     }
-    .odd {
-      background:#0D004C;
+    .circle-top:after {
+      bottom: 0;
     }
-    .even {
-      background:#B8B7CC;
+    .circle-bottom{
+      top:66%;
+    }
+    .circle-bottom:after {
+      top: 0;
     }
   </style>
-
-
-<!-- 
-
-exercice linear gradient
-faire un degrade linear du rouge vers le bleu en partant du haut, droit, bas, gauche, gauche-droit...
-faire un degradé circulaire 2 mai 2020
-
-
-revision stop #4 mais #3 pas fait
