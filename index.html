@@ -1,48 +1,57 @@
-<div class="rectangle">
-  <div class="circle-top"></div>
-  <div class="circle-bottom"></div>
-  </div>
-  <style>
-    body {
-     background-color: #B8B7CC;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    }
-    .rectangle {
-      width: 250px;
-      height: 150px;
-      background: #1E1E5A;
-      position: relative;
-    }
-    div[class*=circle]{
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    background-color: #1E1E5A;
-    left: 50%;
+<div class="container">
+  <div class="square-start"></div>
+  <div class="square-end"></div>
+</div>
+<style>
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F58220;
+  }
+  .container {
+    width: 220px;
+    height: 120px;
+    background: #F58220;
+    border-radius: 100px;
+    border: 30px solid white;
+    position:relative;
+  }
+  .Container:after, .container:before {
+    position:absolute;
+    content:"";
+    background-color: white;
+    
+  }
+  .Container:after {
+    top:0;
+    bottom:0;
+    left:50%;
     transform: translateX(-50%);
-    border-radius: 50%;
-      overflow: hidden;
-    }
-    .circle-top {
-      bottom:67%;
-    }
-    .circle-top:after, .circle-bottom:after {
-      content:"";
-      position: absolute;
-      bottom: 0;
-      height: 50%;
-      width: 100%;
-      background-color: #B8B7CC;
-    }
-    .circle-top:after {
-      bottom: 0;
-    }
-    .circle-bottom{
-      top:66%;
-    }
-    .circle-bottom:after {
-      top: 0;
-    }
-  </style>
+    width:30px;
+  }
+  .container:before {
+    height:50%;
+    width:159px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    border-radius:155px;
+  }
+  [class^=square] {
+    width:30px;
+    height:30px;
+    background-color: #F58220;
+    position:absolute;
+    left:50%;
+    transform: translate(-50%);
+    z-index:1;
+  }
+  .square-start{
+    top:-30px;
+    
+  }
+  .square-end {
+    bottom:-30px
+  }
+</style>
