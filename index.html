@@ -1,63 +1,27 @@
-<div class="triangle">
-  <div class="circle circle-top"></div>
-  <div class="circle circle-bottom"></div>
-</div>
+<div class="rectangle"></div>
 <style>
-body {
-  background: #F58220;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.triangle {
-  width:0;
-  height:0;
-  border-bottom: 160px solid #FFFFFF;
-  border-right: 125px solid #F58220;
-  border-left: 125px solid #F58220;
-  background: #dd6b4d;
-  position:relative;
-}
-  .circle {
-  border-radius: 50%;
-  background-color: #F58220;
-}
-.circle-top {
-  height:20px;
-  width:20px;
-  position:absolute;
-  left:50%;
-  top:50px;
-  transform:translateX(-50%);
-}
-.circle-bottom {
-  height:50px;
-  width:50px;
-  position:absolute;
-  left:50%;
-  top:90px;
-  transform:translateX(-50%);
-}
-.circle-bottom::before {
-  content:'';
-  height:20px;
-  width:20px;
-  position:absolute;
-  right:70px;
-  bottom:50%;
-  background-color:#F58220;
-  border-radius:50%;
-  transform:translateY(50%);
-}
-.circle-bottom::after {
-  content:'';
-  height:20px;
-  width:20px;
-  position:absolute;
-  left:70px;
-  bottom:50%;
-  transform:translateY(50%);
-  background-color:#F58220;
-  border-radius:50%;
-}
+  body {
+    background-color: #7D4886;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .rectangle {
+    width: 150px;
+    height: 150px;
+    background: #670053;
+    position: relative;
+    transform: rotate(45deg)
+  }
+  .rectangle::after {
+    position:absolute;
+    content:'';
+    height:67%;
+    width: 67%;
+    border-radius:50%;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background-color: #7D4886;
+  }
 </style>
